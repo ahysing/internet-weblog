@@ -214,22 +214,11 @@ The theme expects you to override a few files in your blog to finalize the custo
 
 Did you find a bug or have an ideas for new features? Feel free to use the issue tracker to let me know or make a pull request.
 
-
 ## 3rd Party Libraries
 
 This theme makes use of the following 3rd Party Libraries.
 
-- [lightGallery v1.2.14](http://sachinchoolur.github.io/lightGallery/) - Used in page footer to provide a gallery to view photos in the photo stream.
-
-## License
-
-This theme is released under MIT. For more information, please see the [License](http://jnjosh.mit-license.org).
-
-## Contact
-
-This is the first theme I've made for Hugo, so I'm sure I've done some things wrong or assumed too much. If you have ideas or things that should be fixed, please let me know.
-
-- [Josh Johnson](http://jnjosh.com) [@jnjosh](http://twitter.com/jnjosh)
+- [lightbox 2](https://github.com/lokesh/lightbox2)
 
 ---
 

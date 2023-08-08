@@ -8,7 +8,6 @@ body {
 
 a[href] {
 	color: #476286;
-	text-decoration: none;
 }
 
 a:hover {
@@ -159,12 +158,15 @@ article.micropost {
 }
 
 .micropost p > a, .post p > a {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 .post h2 {
   margin: 0;
   line-height: 32px;
+}
+.post h2 a[href] {
+  text-decoration: none;
 }
 
 article.photo {
@@ -216,7 +218,7 @@ article.photo img:hover {
 
 article .postmeta {
 	line-height: 22px;
-	color: #999999;
+	color: #777777;
   margin: 0 auto;
 	padding: 5px 0 0 0;
 }
@@ -356,6 +358,10 @@ and (max-width: 780px) {
     font-size: 22px;
     line-height: 30px;
     text-align: center;
+  }
+
+  header h1 a[href] {
+    text-decoration: none;
   }
 
   nav ul {

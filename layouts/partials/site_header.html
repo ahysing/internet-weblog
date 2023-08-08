@@ -12,10 +12,8 @@
     <title>{{ with .Title }}{{ if ne . ($.Scratch.Get "title") }}{{ . }} &middot; {{ end }}{{ end }}{{ .Site.Title }}</title>
 
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/weblog.css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {{ partial "custom_stylesheets.html" . }}
-
     {{ if .Site.Params.rssenabled }}
 	<link href="{{.Site.RSSLink}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 	{{ end }}
