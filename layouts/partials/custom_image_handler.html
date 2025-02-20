@@ -1,14 +1,4 @@
 <script type="text/javascript">
-<<<<<<< HEAD
-  $('picture').each(function() {
-    var x = document.createElement("a");
-    var href = $(this).find('img').attr('src');
-    x.href = href;
-    var dl = document.createAttribute('data-lightbox');
-    dl.value = 'set';
-    x.setAttributeNode(dl);
-    $(this).wrap(x);
-=======
 
   // @summary: jquery implementation
   $(function() {
@@ -16,6 +6,5 @@
     $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?id={{ .Site.Params.Author.flickrid }}&format=json&jsoncallback=?", function(data) {
       iweblog.application.displayImages(data, 8);
     });
->>>>>>> 558b8b4ae01f4bf85e644d7c0c82a9f48aae21b7
   });
 </script>

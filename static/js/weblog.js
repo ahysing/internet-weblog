@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 var iweblog = {};
 iweblog.application = function() {
 
@@ -33,4 +31,3 @@ lightbox.option({
 	'resizeDuration': 400,
 	'wrapAround': true
 })
->>>>>>> 558b8b4ae01f4bf85e644d7c0c82a9f48aae21b7

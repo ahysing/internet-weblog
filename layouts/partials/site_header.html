@@ -18,12 +18,6 @@
     {{ end }}
     {{ hugo.Generator }}
     {{ $.Scratch.Add "title" .Site.Title }}
-<<<<<<< HEAD
-    <title>{{ with .Title }}{{ if ne . ($.Scratch.Get "title") }}{{ . }} &middot; {{ end }}{{ end }}{{ .Site.Title }}</title>
-
-    <link rel="stylesheet" href="{{.Site.BaseURL}}css/weblog.css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-=======
     <title>{{ with .Title }}{{ if ne . ($.Scratch.Get "title") }}{{ . }} &middot; {{ end }}{{ end }}@{{ .Site.Params.Author.handle }}’s {{ .Site.Title }}</title>
 
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/joshin-color-palette.css" media="screen" charset="utf-8" />
@@ -34,8 +28,7 @@
 
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/weblog.css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="{{.Site.BaseURL}}lightbox2-2.11.4/css/lightbox.min.css" type="text/css" />
-    
->>>>>>> 558b8b4ae01f4bf85e644d7c0c82a9f48aae21b7
+
     {{ partial "custom_stylesheets.html" . }}
     {{ if .Site.Params.rssenabled }}
 	  <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{.Site.Title}}" />

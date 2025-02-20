@@ -11,12 +11,8 @@ body {
 }
 
 a[href] {
-<<<<<<< HEAD
-	color: #476286;
-=======
 	color: var(--joshin-component-link-color-default);
 	text-decoration: none;
->>>>>>> 558b8b4ae01f4bf85e644d7c0c82a9f48aae21b7
 }
 
 a:hover {
@@ -183,17 +179,7 @@ article.micropost {
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
-.post h2 {
-  margin: 0;
-  line-height: 32px;
-}
-.post h2 a[href] {
-  text-decoration: none;
-}
-=======
 /* Photo Posts */
->>>>>>> 558b8b4ae01f4bf85e644d7c0c82a9f48aae21b7
 
 article.photo {
   border-radius: 14px;
@@ -241,16 +227,7 @@ article.photo img:hover {
   transform: scale3d(1.1, 1.1, 1.1) rotate(-2deg);
 }
 
-<<<<<<< HEAD
-article .postmeta {
-	line-height: 22px;
-	color: #777777;
-  margin: 0 auto;
-	padding: 5px 0 0 0;
-}
-=======
 /* Post Grouping */
->>>>>>> 558b8b4ae01f4bf85e644d7c0c82a9f48aae21b7
 
 .post-group {
   display: flex;

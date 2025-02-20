@@ -233,9 +233,6 @@ Did you find a bug or have an ideas for new features? Feel free to use the issue
 
 This theme makes use of the following 3rd Party Libraries.
 
-<<<<<<< HEAD
-- [lightbox 2](https://github.com/lokesh/lightbox2)
-=======
 - Image Gallery in Footer
    - [jQuery 3.7.1](https://jquery.com)
    - [lightbox2 2.11.4](https://lokeshdhakar.com/projects/lightbox2/)
@@ -249,7 +246,6 @@ This theme is released under MIT. For more information, please see the [License]
 This is the first theme I've made for Hugo, so I'm sure I've done some things wrong or assumed too much. If you have ideas or things that should be fixed, please let me know.
 
 - [Josh Johnson](http://jnjosh.com) [@jnjosh](https://mastodon.social/@jnjosh)
->>>>>>> 558b8b4ae01f4bf85e644d7c0c82a9f48aae21b7
 
 ---
 
