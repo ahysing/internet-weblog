@@ -229,7 +229,6 @@ The theme expects you to override a few files in your blog to finalize the custo
 
 Did you find a bug or have an ideas for new features? Feel free to use the issue tracker to let me know or make a pull request.
 
-
 ## 3rd Party Libraries
 
 This theme makes use of the following 3rd Party Libraries.

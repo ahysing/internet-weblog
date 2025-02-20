@@ -101,7 +101,9 @@ nav ul > li {
 }
 
 .rss-icon {
-  height: 14px;
+  width: 20%;
+  height: auto;
+  max-height: 2em;
   padding-left: 5px;
 }
 
@@ -174,7 +176,7 @@ article.micropost {
 }
 
 .micropost p > a, .post p > a {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 /* Photo Posts */
@@ -364,6 +366,10 @@ and (max-width: 780px) {
     font-size: 22px;
     line-height: 30px;
     text-align: center;
+  }
+
+  header h1 a[href] {
+    text-decoration: none;
   }
 
   nav ul {

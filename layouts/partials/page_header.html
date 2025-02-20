@@ -1,6 +1,6 @@
 <header>
   <nav>
-    <h1><a href="/">{{ .Site.Title }}</h1>
+    <h1><a href="/">{{ .Site.Title }}</a></h1>
     <div class="menu">
 		{{ if isset .Site.Params "rsssections" }}
 			{{ $.Scratch.Add "sections" .Site.Params.rsssections }}
@@ -9,7 +9,7 @@
 				<li>
 					<a href="{{.URL}}">{{ .Name }}</a>
 					{{ if in ($.Scratch.Get "sections") .Name }}
-						<a href="{{.URL}}index.xml"><img src="/img/rss.svg" class="rss-icon" /></a>
+						<a href="{{.URL}}index.xml" aria-label="posts"><img src="/img/rss.svg" width="31" height="15" alt="RSS-feed contains all the posts." class="rss-icon" /></a>
 					{{ end }}
 				</li>
 				{{ end }}
