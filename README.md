@@ -6,7 +6,7 @@ The theme features a customizable bio-section and flickr-based photo stream in i
 
 To see more, [check out my blog which is rendered with this theme](http://jnjosh.com) and see it's [configuration on Github](https://github.com/jnjosh/jnjosh.com).
 
-![internet-weblog showing a Micropost.](https://github.com/jnjosh/internet-weblog/blob/master/images/screenshot.png)
+![internet-weblog showing a Micropost.](https://github.com/jnjosh/internet-weblog/blob/main/images/screenshot.png)
 
 ## Contents
 
@@ -18,6 +18,8 @@ To see more, [check out my blog which is rendered with this theme](http://jnjosh
         - [Defining Yourself as the Author](#defining-yourself-as-the-author)
         - [Customizing the Bio Section, 404 Page, Javascript, or Stylesheets](#customizing-the-bio-section-404-page-javascript-or-stylesheets)
         - [Creating a Link Post](#creating-a-link-post)
+        - [Specifying a Featured Image for Social Media](#specifying-a-featured-image-for-social-media)
+        - [Preferred Dark Appearance](#preferred-dark-appearance)
     - [Variables](#variables)
     - [Overrides](#overrides)
 - [Contributing](#contributing)
@@ -55,7 +57,7 @@ It also assumes you want to display links to your sections of content (`posts`, 
 
 The theme works with other content types, but posts work best when grouped under `posts`. When using the `posts` (_note that it is plural_) content type you'll have a customized list page sorted by year and the default list page. Here's an example:
 
-![Custom List Page sorted by Year](https://github.com/jnjosh/internet-weblog/raw/master/images/posts.png)
+![Custom List Page sorted by Year](https://github.com/jnjosh/internet-weblog/raw/main/images/posts.png)
 
 **Recommendation:** Organize your blog posts under the `posts` directory.
 
@@ -86,7 +88,7 @@ You can then control the name and weight of these menus in your `config.toml` by
    url = "/posts/"
 ```
 
-If you aren't sure of how this should look, see how [jnjosh.com uses this in it's config.toml](https://github.com/jnjosh/jnjosh.com/blob/master/config.toml).
+If you aren't sure of how this should look, see how [jnjosh.com uses this in it's config.toml](https://github.com/jnjosh/jnjosh.com/blob/main/config.toml).
 
 **Recommendation:** Add `SectionPagesMenu` to your `config.toml` file.
 **Recommendation:** Don't set a `menu` in your post's Front Matter unless you want it to display on the navigation.
@@ -95,10 +97,10 @@ If you aren't sure of how this should look, see how [jnjosh.com uses this in it'
 
 #### Defining yourself as the Author
 
-It looks like most themes use the `author` variable to add something simple like your name. This theme uses more structured data about you and requires an `[author]` section. The details of what is affected by each property is defined below in the variables section, but you should add this section to your `config.toml`:
+It looks like most themes use the `author` variable to add something simple like your name. This theme uses more structured data about you and requires an `[params.author]` section. The details of what is affected by each property is defined below in the variables section, but you should add this section to your `config.toml`:
 
 ```
-[author]
+[params.author]
    Handle = "<Your `handle`>"
    FirstName = "<Your First Name>"
    LastName = "<Your Last Name>"
@@ -107,7 +109,7 @@ It looks like most themes use the `author` variable to add something simple like
    FlickrID = "<Your Flickr ID>"
 ```
 
-**Recommendation:** Don't use the `author` variable, use the above `[author]` section in your `config.toml`.
+**Recommendation:** Don't use the `author` variable, use the above `[params.author]` section in your `config.toml`.
 
 #### Customizing the Bio Section, 404 page, javascript, or stylesheets
 
@@ -127,7 +129,19 @@ externalurl = "http://kickstarter.com"
 
 These posts are rendered slightly different with an → to signify that it is remote.
 
-![External URL](https://github.com/jnjosh/internet-weblog/raw/master/images/linkpost.png)
+![External URL](https://github.com/jnjosh/internet-weblog/raw/main/images/linkpost.png)
+
+#### Specifying a featured image for social media
+
+Sometimes you want to feature an image as your featured image that will display when linking your post in social media. This can be done by including the `feature` parameter on your individual post. Note you don't need to put the URL, just the path to the image without a leading `/`
+
+```
+feature: "assets/posts/20240219/image.jpg"
+```
+
+#### Preferred Dark Appearance
+
+If you want to enable a dark appearance, there is limited support for that. Currently, setting the `EnablePreferredDarkAppearance` param to true in your config.toml file will enable it in an automatic state—if the system is using dark mode.
 
 ### Variables
 
@@ -136,14 +150,15 @@ These posts are rendered slightly different with an → to signify that it is re
 | `theme`  | `internet-weblog` | Only if you want to use this theme! 😃|
 | `title` | `internet weblog` | No. Unless you want to call your blog something else. |
 | `SectionPagesMenu` | `main` | Yes. See [above](#configuring-your-blog). |
-| `[author]` - `Handle` | A short handle to describe you. This could be your twitter handle or simply your first name. | Yes. This is used to generate the Site's Title. |
-| `[author]` - `FirstName` | Your first name | Yes. This is used in the footer to say Hi and in other places to identify you as the author. |
-| `[author]` - `LastName` | Your last name | Not really. It is used in some places to identify you as the author. |
-| `[author]` - `AboutPage` | `/about` or `http://about.othersite.com` | Only if you want an about page. This is exposed to allow you to link to an external about page as well. If you have a local page it can just be something relative. |
-| `[author]` - `Location` | `Your City` | No. If set, this is added to the Copyright in the footer so you can give some love to your hometown. |
-| `[author]` - `FlickrID` | `Your Flickr ID` | No. The footer shows your photo stream from flickr. If you don't set it, nothing will be displayed. |
+| `[params.author]` - `Handle` | A short handle to describe you. This could be your twitter handle or simply your first name. | Yes. This is used to generate the Site's Title. |
+| `[params.author]` - `FirstName` | Your first name | Yes. This is used in the footer to say Hi and in other places to identify you as the author. |
+| `[params.author]` - `LastName` | Your last name | Not really. It is used in some places to identify you as the author. |
+| `[params.author]` - `AboutPage` | `/about` or `http://about.othersite.com` | Only if you want an about page. This is exposed to allow you to link to an external about page as well. If you have a local page it can just be something relative. |
+| `[params.author]` - `Location` | `Your City` | No. If set, this is added to the Copyright in the footer so you can give some love to your hometown. |
+| `[params.author]` - `FlickrID` | `Your Flickr ID` | No. The footer shows your photo stream from flickr. If you don't set it, nothing will be displayed. |
 | `[params]` - `Description` | `Describe your site` | No. If set, this is added to your pages metadata. |
 | `[params]` - `ShowCopyright` | `true` or `false` | No. If true, Copyright text will be added to the footer. |
+| `[params]` - `EnablePreferredDarkAppearance` | `true` or `false` | No. If true, The viewers system dark mode is respected switching to a dark appearance. |
 | `[params]` - `RSSEnabled` | `true` or `false` | No. If true, RSS pages will be generated. |
 | `[params]` - `RSSSections` | `[ "Posts", "Microposts", "Photos" ]` | If you want RSS links in the menu, yes. These strings need to be the display name of the section where you want to have an RSS icon displayed. ![rss](https://github.com/jnjosh/internet-weblog/blob/master/images/rss.png) |
 | `[params]` - `RSSMicropostTitles` | `true` or `false` | No. If false, Microposts RSS feeds will not have the title in included posts. If not present or true, nothing happens. |
@@ -160,7 +175,7 @@ theme = "internet-weblog"
 Paginate = 10
 SectionPagesMenu = "main"
 
-[author]
+[params.author]
    Handle = "jnjosh"
    FirstName = "Josh"
    LastName = "Johnson"
@@ -218,7 +233,23 @@ Did you find a bug or have an ideas for new features? Feel free to use the issue
 
 This theme makes use of the following 3rd Party Libraries.
 
+<<<<<<< HEAD
 - [lightbox 2](https://github.com/lokesh/lightbox2)
+=======
+- Image Gallery in Footer
+   - [jQuery 3.7.1](https://jquery.com)
+   - [lightbox2 2.11.4](https://lokeshdhakar.com/projects/lightbox2/)
+
+## License
+
+This theme is released under MIT. For more information, please see the [License](http://jnjosh.mit-license.org).
+
+## Contact
+
+This is the first theme I've made for Hugo, so I'm sure I've done some things wrong or assumed too much. If you have ideas or things that should be fixed, please let me know.
+
+- [Josh Johnson](http://jnjosh.com) [@jnjosh](https://mastodon.social/@jnjosh)
+>>>>>>> 558b8b4ae01f4bf85e644d7c0c82a9f48aae21b7
 
 ---
 
