@@ -18,7 +18,7 @@
     {{ end }}
     {{ hugo.Generator }}
     {{ $.Scratch.Add "title" .Site.Title }}
-    <title>{{ with .Title }}{{ if ne . ($.Scratch.Get "title") }}{{ . }} &middot; {{ end }}{{ end }}@{{ .Site.Params.Author.handle }}’s {{ .Site.Title }}</title>
+    <title>{{ with .Title }}{{ if ne . ($.Scratch.Get "title") }}{{ . }} &middot; {{ end }}{{ end }}{{ .Site.Title }}</title>
 
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/joshin-color-palette.css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/joshin-color-light.css" media="screen" charset="utf-8" />
@@ -28,7 +28,7 @@
 
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/weblog.css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="{{.Site.BaseURL}}lightbox2-2.11.4/css/lightbox.min.css" type="text/css" />
-    
+
     {{ partial "custom_stylesheets.html" . }}
 
     {{ if .Site.Params.rssenabled }}
